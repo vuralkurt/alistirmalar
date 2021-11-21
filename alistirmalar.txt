@@ -1,0 +1,251 @@
+public class Armstrong_Numberr {
+
+	public static void main(String[] args) {
+		/*
+		 * Bir sayının basamaklarındaki tüm rakamların ayrı ayrı küplerinin toplamı
+		 * kendisine eşitse bu sayıya Armstrong sayı denir.
+		 * sayi 4 basakli ise kupleri degil 4 kuvvetleri alinacak 
+		 * 5 basamakli ise 5 . kuvvetleri kac basamakli ise o degerde kuvvet alinacak
+		 * Math.pow vb hazir java metodlari kullanmayiniz.
+		 * 
+		 */
+		Scanner scan = new Scanner(System.in);
+        System.out.println("Sayi Giriniz : ");
+        int deger = scan.nextInt();
+        int n = deger;
+        int kalan = 0;
+        int yenideger = 0;
+        int length = String.valueOf(deger).length();
+         System.out.println(length);
+        for(int i=1;i<=length;i++){
+            kalan = deger%10;
+            yenideger = yenideger + (int)Math.pow(kalan,length);
+            deger = deger/10;
+        }
+         
+        if(yenideger == n){
+            System.out.println("Sayi Armstrong Sayidir : " + n + " = " + yenideger);
+        }else{
+            System.out.println("Sayi Armstrong Sayi Degildir");
+        }
+		
+	}
+}
+
+
+****************************************************************************************
+
+ /*  KullanÄ±cÄ± tarafÄ±ndan girilen inputda kac tane 'b' karakteri olduÄŸunu belirle ve print et.
+
+     input: Test output
+            b: 0
+        output 0 olmalÄ±
+
+
+     input: bucket
+            b:1
+        output 1 olmalÄ±
+        */
+
+
+    //hint: .charAt, length(), for, index, counter,
+
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("lutfen text giriniz");
+        String text = input.nextLine();
+
+         // code start here
+         // kodu burdan baÅŸlatÄ±n ve bu satÄ±rdan Ã¶nceki kodlari deÄŸiÅŸtirmeyin
+        int sayac=0;
+        for (int i = 0; i < text.length()-1; i++) {
+			
+        	if (text.charAt(i)=='b') {
+        		sayac++;
+				
+			}
+		}
+        System.out.println("Cumledeki b karakteri sayisi:"+sayac);
+        
+        
+        
+
+        }
+
+}
+
+
+*****************************************************************************************************
+
+/*
+	 * Veri tipi int olan variable(deÄŸiÅŸken) verildiÄŸinde
+	 * 
+	 * Eger int 1 ise print monday Eger int 2 ise print tuesday Eger int 3 ise print
+	 * wednesday Eger int 4 ise print thursday Eger int 5 ise print friday Eger int
+	 * 6 ise print saturday Eger int 7 ise print sunday Eger int 8 den buyuk ise
+	 * print "this is not a valid day"
+	 * 
+	 * NOT : BU PROBLEMI Ã‡Ã–ZERKEN SWITCH STATEMENT KULLANIN
+	 * 
+	 */
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Lutfen gun icin 1 ile 7 arasinda bir sayi giriniz");
+		int day = scanner.nextInt();
+
+		// code Start here don't change before this line
+		// kodu burdan baÅŸlatÄ±n ve bu satÄ±rdan Ã¶nceki kodlari degiÅŸtirmeyin
+
+		switch (day) {
+		case 1: {
+			System.out.println("MONDAY");
+
+			break;
+
+		}
+		case 2: {
+			System.out.println("TUESDAY");
+
+			break;
+		
+		}
+		case 3: {
+			System.out.println("WEDNESDAY");
+
+			break;
+
+		}
+		case 4: {
+			System.out.println("THURSDAY");
+
+			break;
+
+		}
+		case 5: {
+			System.out.println("FRIDAY");
+
+			break;
+
+		}
+		case 6: {
+			System.out.println("SATURDAY");
+
+			break;
+
+		}
+		case 7: {
+			System.out.println("SUNDAY");
+
+			break;
+
+		}
+		default:System.out.println("hatali deger girdiniz");
+	}
+}
+}
+
+
+******************************************************************************************************
+
+
+		/*
+		 * Scanner class aracÄ±lÄ±ÄŸÄ±yla girilen herhangi bir sayÄ±nÄ±n faktÃ¶riyel
+		 * deÄŸerini bulmak iÃ§in bir program yazÄ±n.
+		 * 
+		 * number:6 factorial:1*2*3*4*5*6=720 output ---> 720
+		 * 
+		 * 
+		 */
+
+		Scanner dp = new Scanner(System.in);
+		System.out.println("lutfen bir sayi degeri giriniz");
+		String strNum = dp.nextLine();
+
+		int number = Integer.parseInt(strNum);
+
+		// code start here use int number
+		// kodu burdan baÅŸlatÄ±n ve int number kullanÄ±n
+		int sonuc = 1;
+		for (int i = 1; i <= number; i++) {
+			
+			sonuc = sonuc * i;
+
+		}
+		System.out.println("Sonuc="+sonuc);
+	}
+}
+
+
+********************************************************************************************************
+
+ /*
+     3 tane pozitif String verildiÄŸinde
+     sayÄ±sal olmayan tÃ¼m karakterleri kaldÄ±rÄ±n.
+     Stringleri int e Ã§evirin
+     ve total print edin
+
+         Ornek:
+        String num1 = "$15";
+        String num2 = "$20";
+        String num3 = "$30";
+        output ----> 65; olmali
+
+        NOT : EÄŸer output 0 dan kÃ¼Ã§Ã¼k ise outputu -1 e cevir
+
+
+
+
+
+    */
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("lutfen sayilari giriniz");
+        String tumSayilar = scanner.nextLine();
+
+        String[] elements = tumSayilar.split(" ");
+
+        String num1 = elements[0];
+
+        String num2 = elements[1];
+
+        String num3 = elements[2];
+
+        //  code Start here don't change before this line
+        //   use String num1 , num2 , num3
+
+        // kodu burdan baÅŸlatÄ±n ve bu satÄ±rdan Ã¶nceki kodlari deÄŸiÅŸtirmeyin
+        // String num1,num2,num3 kullanÄ±n
+        
+        
+        String number1=num1.replaceAll("\\D", "");
+        int number11 = Integer.valueOf(number1);
+        
+        String number2=num2.replaceAll("\\D", "");
+        int number22 = Integer.valueOf(number2);
+        
+        String number3=num3.replaceAll("\\D", "");
+        int number33 = Integer.valueOf(number3);
+        
+        int toplam=number11+number22+number33;
+        
+        if (toplam<=0) {
+        	System.out.println("Sonuc="+-1);
+			
+		} else {System.out.println("Sonuc="+toplam);
+
+		}
+
+
+
+
+
+
+    }
+}
+
+
+----------------------------------------------------------------------------------------------------
