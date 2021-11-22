@@ -1,0 +1,94 @@
+package Alistirma_21_11_2021;
+
+import java.util.Scanner;
+
+public class perfectSquare {
+
+	/*
+	 * 
+	 * Pozitif bir tamsayı verildiğinde, döndürüldüğünde, sayı tam bir kare ise
+	 * true, aksi halde false döndüren bir fonksiyon yazın.
+	 * 
+	 * Not: sqrt gibi işlevleri kullanmayın.
+	 * 
+	 * Örnek 1: Giriş: 16 Çıktı: doğru Not: Bu sayı bir tam karedir çünkü 4 * 4 = 16
+	 * 
+	 * Örnek 2: Giriş: 25 Çıktı: doğru Not: Bu sayı tam karedir çünkü 5 * 5 = 25
+	 * 
+	 * 
+	 * Örnek 3: Giriş: 14 Çıktı: yanlış
+	 * 
+	 */
+
+	public static void main(String[] args) {
+
+		Scanner sayi = new Scanner(System.in);
+
+		System.out.print("Sayi giriniz: ");
+
+		double number = sayi.nextDouble();
+
+		if (kontrolPerfectSayi(number))
+			System.out.println("bu sayi perfect sayidir");
+		else
+			System.out.print("bu sayi perfect sayi degildir");
+	}
+
+	private static boolean kontrolPerfectSayi(double number) {
+		{
+			for (int i = 1; i * i <= number; i++) {
+
+				if ((number / i == i)) {
+
+					return true;
+				}
+			}
+
+			return false;
+		}
+
+	}
+
+}
+**************************************************************************************************
+
+public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int maxNum = scanner.nextInt();
+
+        //  code Start here don't change before this line
+        // kodu burdan baÅŸlatÄ±n ve bu satÄ±rdan Ã¶nceki kodlarÄ± deÄŸiÅŸtirmeyin
+
+        for (int i = 0; i <= maxNum; i++) {
+        	
+        	if (i%2==0) {
+				System.out.println(i);
+			}
+			
+		}
+        
+        
+        
+        
+        }
+    }
+
+****************************************************************************************************
+
+public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("bir sayi giriniz : ");
+		int max = scanner.nextInt();
+
+		// code Start here don't change before this line
+		// kodu burdan baÅŸlatÄ±n ve bu satÄ±rdan Ã¶nceki kodlarÄ± deÄŸiÅŸtirmeyin
+
+		for (int i = 0; i < 3; i++) {
+			System.out.print((int) (Math.random() * max)+"\t " );
+		}
+	}
+
+}
